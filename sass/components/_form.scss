@@ -1,0 +1,157 @@
+.form-subscribe {
+    margin-left: auto;
+    &__group {
+        display: flex;
+        gap: 12px;
+    }
+    &__label {
+        display: inline-block;
+    }
+    &__input {
+        width: 358px;
+        height: 50px;
+        padding-left: 16px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.25;
+        color: rgba(255, 255, 255, 0.6);
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+    }
+    &__submit {
+        @extend %flexCenter;
+    }
+    &__icon {
+        display: inline-block;
+        padding-left: 10px;
+    }
+}
+
+.form-register {
+    text-align: center;
+    &__label {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 28px;
+        &--mbottom {
+            margin-bottom: 20px;
+        }
+        &--text {
+            position: absolute;
+            top: -14px;
+            left: 0;
+            font-size: 12px;
+            line-height: 1.16;
+            letter-spacing: 0.01em;
+            color: var(--color-silver);
+        }
+    }
+    &__label:focus-within & {
+        &__input,
+        &__comment {
+            border: 1px solid var(--color-blue);
+            border-radius: 4px;
+            outline-style: none;
+        }
+        &__icon {
+            fill: var(--color-blue);
+        }
+    }
+    &__input {
+        height: 40px;
+        padding: 12px 0 12px 42px;
+        font-size: 12px;
+        color: rgba(117, 117, 117, 0.5);
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        transition: border 250ms ease-in-out;
+    }
+    &__comment {
+        height: 120px;
+        padding: 12px 16px;
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        resize: none;
+    }
+    &__comment::placeholder {
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+
+    }
+    &__icon {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translate(0, -50%);
+        transition: fill 250ms ease-in-out;
+    }
+    &__privacy {
+        display: inline-flex;
+        align-items: center;
+        margin-bottom: 30px;
+        &-text {
+            font-size: 14px;
+            line-height: 1.71;
+            letter-spacing: 0.03em;
+            color: var(--color-silver);
+        }
+        &-link {
+            color: var(--color-blue);
+            text-decoration: underline;
+        }
+    }
+
+    &__checkbox {
+        position: relative;
+        display: inline-block;
+        width: 16px;
+        height: 15px;
+        margin-right: 9px;
+    }
+
+    &__checkbox--hidden {
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+
+    &__checkbox--hidden:checked + & {
+        &__checkbox--icon {
+            background-image: url('../images/checbox-active.svg');
+            background-repeat: no-repeat; 
+        }
+    }
+
+    &__checkbox--icon {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        background-image: url('../images/checkbox-default.svg'); 
+    }
+
+    &__submit {
+        @extend %flexCenter;
+        margin-bottom: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+        height: 50px;
+        @include styledFonts(700, 16px, 1.875, --color-white);
+        letter-spacing: 0.06em;
+        background-color: var(--color-blue);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+    }
+}

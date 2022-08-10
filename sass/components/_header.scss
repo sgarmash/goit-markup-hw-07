@@ -1,0 +1,28 @@
+.header {
+    border-bottom: 1px solid var(--color-bright-gray);
+
+    &__menu {
+        margin-left: 93px;
+    }
+
+    &__link {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    &__contact {
+        margin-left: auto;
+    }
+
+    &-contact__item {
+        margin-left: 50px;
+    }
+
+    &-contact__item:first-of-type {
+        margin-left: 0;
+    }
+
+    &-contact__icon {
+        margin-right: 10px;
+    }
+}

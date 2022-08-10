@@ -1,0 +1,16 @@
+.logo {
+    font-family: 'Raleway';
+    @include styledFonts(700, 26px, 1.173, --color-black);
+    letter-spacing: 0.03em;
+
+    &__text--blue {
+        color: var(--color-blue);
+    }
+    
+    .footer & {
+        display: inline-block;
+        margin-bottom: 20px;
+        color: var(--color-white);
+    }
+
+}

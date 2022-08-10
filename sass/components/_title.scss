@@ -1,0 +1,17 @@
+.title {
+    &__main {
+        @include styledFonts(900, 44px, 1.36, --color-white);
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+    }
+    &__sub {
+        @include styledFonts(700, 36px, 1.166, --color-dark-green);
+        text-align: center;
+        letter-spacing: 0.03em;
+    }
+}
+
+.visually-hidden {
+    @extend %visuallyHidden;
+}

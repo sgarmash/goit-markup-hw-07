@@ -1,0 +1,10 @@
+.container {
+    @extend %container;
+    .header & {
+        display: flex;
+        align-items: center;
+    }
+    .footer & {
+        display: flex;
+    }
+}

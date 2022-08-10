@@ -1,0 +1,30 @@
+.tabs {
+    margin-bottom: 50px;
+    text-align: center;
+    &__item {
+        display: inline-block;
+        margin-left: 8px;
+    }
+    &__item:first-of-type {
+        margin-left: 0;
+    }
+    &__button {
+        padding: 6px 22px;
+        font-family: 'Roboto';
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.625;
+        letter-spacing: 0.03em;
+        color: var(--color-dark-green);
+        background-color: var(--color-white-solid);
+        border-radius: 4px;
+        transition: background-color 250ms ease-in-out, color 250ms ease-in-out, box-shadow 250ms ease-in-out;
+    }
+    &__button:hover,
+    &__button:focus {
+        color: var(--color-white);
+        background-color: var(--color-blue);
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+        outline: none;
+    }
+}
