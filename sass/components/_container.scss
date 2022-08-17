@@ -7,4 +7,9 @@
     .footer & {
         display: flex;
     }
+    .hero & {
+        @extend %flexCenter;
+        flex-direction: column;
+        height: 100%;
+    }
 }

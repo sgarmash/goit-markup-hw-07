@@ -12,6 +12,12 @@
         @include styledFonts(500, 14px, 0.875, --color-dark-green);
         letter-spacing: 0.02em;
         transition: color 250ms ease-in-out;
+        &.is-active {
+            color: var(--color-blue);
+        }
+        &.is-active::after {
+            transform: scaleY(1);
+        }
     }
     &__link::after {
         content: '';
@@ -29,7 +35,6 @@
     &__link:focus,
     &__link:focus-visible {
         color: var(--color-blue);
-        outline: none;
     }
     &__link:hover::after,
     &__link:focus::after,

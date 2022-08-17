@@ -297,17 +297,13 @@ summary {
 	display: list-item;
 }
 
-a { text-decoration: none; }
-
-ul, ol { 
+.link {text-decoration: none;}
+.list {
     margin: 0;
-    padding: 0;  
+    padding: 0;
+    list-style: none;  
 }
 
-ul li,
-ol li {
-    list-style: none;
-}
 
 h1, 
 h2, 
@@ -326,6 +322,13 @@ button {
 }
 
 body { 
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
+	background-color: var(--color-white);
     color: var(--color-silver); 
+}
+
+.thumbnail {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
 }
