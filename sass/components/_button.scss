@@ -7,5 +7,8 @@
         border-radius: 4px;
         letter-spacing: 0.06em;
         transition: background-color ease-in-out 250ms;
+        &:hover {
+            background-color: var(--persian-blue);
+        }
     }
 }

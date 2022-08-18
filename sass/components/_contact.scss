@@ -9,6 +9,7 @@
     &__link {
         display: inline-flex;
         align-items: center;
+        padding: 32px 0;
         @include styledFonts(500, 14px, 0.875, --color-silver);
         letter-spacing: 0.02em;
         fill: var(--color-silver);
