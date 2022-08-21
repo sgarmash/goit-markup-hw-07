@@ -114,7 +114,8 @@
         letter-spacing: 0.03em;
         color: rgba(255, 255, 255, 0.6);
         transition: color 250ms ease-in-out;
-        &:hover {
+        &:hover,
+        &:focus {
             color: var(--color-blue);
         }
     } 
@@ -125,12 +126,18 @@
     &__item {
         width: calc(33% - 30px);
         flex-grow: 1;
+    }
+    &__link {
+        display: inline-block;
         transition: box-shadow 250ms ease-in-out;
+        outline: transparent;
+        &:hover,
+        &:focus {
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+        }
     }
-    &__item:hover {
-        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-    }
-    &__item:hover &__content--hidden {
+    &__link:hover &__content--hidden,
+    &__link:focus &__content--hidden {
         height: 100%;
         transform: translateY(0);
         visibility: visible;
