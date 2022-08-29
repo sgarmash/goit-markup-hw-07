@@ -115,7 +115,7 @@
         border-radius: 4px;
         border: 1px solid var(--color-solid-green);
         fill: var(--color-solid-green);
-        transition: border 250ms ease-in-out, fill 250ms ease-in-out;
+        transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
         outline: transparent;
         &:hover,
         &:focus,
